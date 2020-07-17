@@ -8,11 +8,14 @@ module.exports = {
 
     const price = getPrice(originDDD, destinyDDD);
 
-    let valueWithPlan = getCallValueWithPlan(
-      price,
-      callTime,
-      callPlan,
-    );
+    if (!price)
+      return res
+        .status(400)
+        .json({
+          error: "This DDD combination does not exist in our database",
+        });
+
+    let valueWithPlan = getCallValueWithPlan(price, callTime, callPlan);
 
     const valueWithoutPlan = getCallValueWithoutPlan(price, callTime);
 
