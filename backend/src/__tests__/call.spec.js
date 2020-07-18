@@ -30,4 +30,22 @@ describe("Call plans", () => {
     expect(response.body).toHaveProperty("error");
     expect(response.status).toEqual(400);
   });
+
+  it("Should be able to return all the DDDs in database", async () => {
+    const response = await request(app).get(`/`);
+
+    expect(response.body).toHaveProperty("origins");
+    expect(response.body).toHaveProperty("destinies");
+  });
+
+  it("Should be able to return all DDD origin matches in database", async () => {
+    const response = await request(app).get(`/?originDDD=11`);
+
+    expect(response.body).toHaveProperty("originMatches");
+  });
+  it("Should be able to return all DDD destiny matches in database", async () => {
+    const response = await request(app).get(`/?destinyDDD=11`);
+
+    expect(response.body).toHaveProperty("destinyMatches");
+  });
 });
