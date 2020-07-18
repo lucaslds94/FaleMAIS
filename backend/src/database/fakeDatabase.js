@@ -1,4 +1,4 @@
-const priceTable = [
+const fakeDatabase = [
   { originDDD: 11, destinyDDD: 16, price: 1.9 },
   { originDDD: 16, destinyDDD: 11, price: 2.9 },
   { originDDD: 11, destinyDDD: 17, price: 1.7 },
@@ -7,4 +7,4 @@ const priceTable = [
   { originDDD: 18, destinyDDD: 11, price: 1.9 },
 ];
 
-module.exports = priceTable;
+module.exports = fakeDatabase;

@@ -5,7 +5,10 @@ const getPrice = (originDDD, destinyDDD) => {
     (tableLine) =>
       tableLine.originDDD == originDDD && tableLine.destinyDDD == destinyDDD
   );
-  return !!call && call.price;
+
+  if (!call) return undefined;
+
+  return call.price;
 };
 
 module.exports = getPrice;
