@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   justify-content: flex-end;
@@ -11,6 +15,7 @@ main .img-container {
   left: 110px;
   top: 75px;
 }
+
 main .img-container img {
   height: 100%;
 }
@@ -18,7 +23,8 @@ main .img-container img {
 .calculator-container {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 520px;
+  padding: 60px;
 
   background: #ffffff;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
@@ -28,13 +34,125 @@ main .img-container img {
   z-index: 2;
 }
 
-main h1 {
+.calculator-title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-title-container h1 {
   display: flex;
   align-items: center;
-
+  width: 225px;
   color: #023f52;
 }
 
-main h1 svg {
+.calculator-title-container span {
+  margin-top: 10px;
+  width: 225px;
+  color: #5c5c5c;
+}
+
+.calculator-title-container h1 svg {
   margin-left: 8px;
+}
+
+.inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.inputs-container label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90px;
+  height: 60px;
+  margin-bottom: 8px;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  color: #5c5c5c;
+}
+
+.input-title-container {
+  margin-bottom: 8px;
+}
+
+.input-title-container span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-left: 4px;
+}
+
+.plan-input-container {
+  margin-top: 16px;
+}
+
+.plan-input-container label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+.plan-input-container span {
+  margin-left: 10px;
+}
+
+.result-container {
+  width: 100%;
+  height: 115px;
+  box-sizing: border-box;
+  border: 2px solid #023f52;
+  border-radius: 5px;
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result-with-plan-container p,
+.result-without-plan-container p {
+  font-weight: bold;
+  font-size: 14px;
+  color: #5c5c5c;
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.result-with-plan span,
+.result-without-plan span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+.result-with-plan strong {
+  font-weight: bold;
+  font-size: 40px;
+  color: #ffb800;
+  margin-left: 4px;
+}
+.result-without-plan strong {
+  font-weight: bold;
+  font-size: 40px;
+  color: #5c5c5c;
+  margin-left: 4px;
+}
+
+@media (max-width: 800px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .calculator-container {
+    margin: 0;
+  }
 }

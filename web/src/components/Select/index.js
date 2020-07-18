@@ -1,14 +1,16 @@
 import React from "react";
+import { uuid } from "uuidv4";
 
 import "./styles.css";
 
-function Select() {
+function Select({ options, label }) {
   return (
-    <select name="" id="">
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
+    <select id={label} className="select">
+      {options.map((option) => (
+        <option key={uuid()} className="select-option" value={option}>
+          {option}
+        </option>
+      ))}
     </select>
   );
 }
