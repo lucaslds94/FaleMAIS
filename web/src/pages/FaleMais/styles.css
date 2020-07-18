@@ -32,6 +32,9 @@ main .img-container img {
   margin-right: 218px;
   margin-top: 40px;
   z-index: 2;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .calculator-title-container {
@@ -49,14 +52,12 @@ main .img-container img {
   color: #023f52;
 }
 
-.calculator-title-container span {
-  margin-top: 10px;
-  width: 225px;
-  color: #5c5c5c;
-}
-
 .calculator-title-container h1 svg {
   margin-left: 8px;
+}
+
+.calculator-title-container span {
+  width: 225px;
 }
 
 .inputs-container {
@@ -70,13 +71,22 @@ main .img-container img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90px;
+  width: 80px;
   height: 60px;
   margin-bottom: 8px;
 
   font-weight: bold;
   font-size: 14px;
 
+  color: #5c5c5c;
+}
+
+.inputs-container label input {
+  border: 2px solid #023f52;
+  border-radius: 5px;
+  height: 42px;
+  width: 100%;
+  padding: 12px 0 12px 8px;
   color: #5c5c5c;
 }
 
@@ -115,6 +125,7 @@ main .img-container img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: auto;
 }
 
 .result-with-plan-container p,
@@ -135,13 +146,13 @@ main .img-container img {
 
 .result-with-plan strong {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   color: #ffb800;
   margin-left: 4px;
 }
 .result-without-plan strong {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   color: #5c5c5c;
   margin-left: 4px;
 }
