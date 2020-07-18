@@ -1,0 +1,40 @@
+main {
+  display: flex;
+  justify-content: flex-end;
+  height: calc(100vh - 50px);
+  background: linear-gradient(119.96deg, #04324b 31.05%, #32586c 89.38%);
+}
+
+main .img-container {
+  position: absolute;
+  height: 560px;
+  left: 110px;
+  top: 75px;
+}
+main .img-container img {
+  height: 100%;
+}
+
+.calculator-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-right: 218px;
+  margin-top: 40px;
+  z-index: 2;
+}
+
+main h1 {
+  display: flex;
+  align-items: center;
+
+  color: #023f52;
+}
+
+main h1 svg {
+  margin-left: 8px;
+}
