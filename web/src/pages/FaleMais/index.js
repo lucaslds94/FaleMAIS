@@ -44,6 +44,14 @@ function FaleMais() {
     setValueWithoutPlan(response.data.valueWithoutPlan);
   }, [callPlan, callTime, selectedDestiny, selectedOrigin]);
 
+  const handleTimeInput = useCallback((e) => {
+    if (e.target.value < 0) {
+      toast.error("Insira um valor válido em minutos");
+      return;
+    }
+    setCallTime(e.target.value);
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await api.get(`/`);
@@ -55,10 +63,6 @@ function FaleMais() {
   }, []);
 
   useEffect(() => {
-    if (isNaN(callTime)) {
-      toast.error("Insira um valor válido em minutos");
-      return;
-    }
     if (selectedOrigin && selectedDestiny && callTime && callPlan) {
       handleConsultPrice();
     }
@@ -95,9 +99,9 @@ function FaleMais() {
               <div className="input-title-container">DURAÇÃO</div>
               <input
                 id="call-time"
-                type="text"
+                type="number"
                 placeholder="Minutos"
-                onChange={(e) => setCallTime(e.target.value)}
+                onChange={handleTimeInput}
               />
             </label>
 

@@ -1,0 +1,8 @@
+{
+  "name": "Site Topp",
+  "theme_color": "#2196f3",
+  "background_color": "#f3215a",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/"
+}

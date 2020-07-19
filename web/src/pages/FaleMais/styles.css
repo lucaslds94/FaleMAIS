@@ -166,4 +166,8 @@ main .img-container img {
   .calculator-container {
     margin: 0;
   }
+
+  main .img-container img {
+    display: none;
+  }
 }
