@@ -1,5 +1,5 @@
 <h1  align="center">
-<img  alt="falemais"  title="#falemais"  src="./github/falemais.PNG" />
+<img  alt="falemais"  title="#falemais"  src=".github/falemais.png" />
 </h1>
 
 <p  align="center">
@@ -24,7 +24,6 @@ Projeto desenvolvido como teste de conhecimento para o processo seletivo da LOLD
 <p  align="center">
 <img  alt="Gif aplicativo"  src=".github/falemaisgif.gif"  width="100%">
 </p>
-
 
 ## 🤠 Getting Started
 
