@@ -1,5 +1,5 @@
 <h1  align="center">
-<img  alt="falemais"  title="#falemais"  src=".github/falemais.png" />
+PLANO FALEMAIS
 </h1>
 
 <p  align="center">
